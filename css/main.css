@@ -4,3 +4,73 @@
 	padding: 0;
 	margin: 0;
 }
+
+body {
+    /* viewport units: vh (viewport height), vw (width), vmin(smallest between vh and vw): <#%>vx: e.g. 50vh (50% of the view height) */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-size: 4vmin;
+    color: darkgray;
+    letter-spacing: 1vmin;;
+}
+
+h1 {
+    color: gray;
+    font-size: 3vmin;
+}
+
+#markers {
+    display: grid;
+    grid-template-columns: repeat(7, 10vmin);
+    gap: 1vmin;
+    margin-top: 1.5vmin;
+}
+
+#markers > div {
+    height: 10vmin;
+    border-width: 5vmin;
+    border-style: solid;
+    border-color: lightgray transparent transparent;
+    transform: scale(0.7);
+}
+
+#markers > div:hover {
+    transform: scale(.9);
+    transition: transform 150ms ease-in;
+    border-top-color: darkgray;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, 10vmin);
+    grid-template-rows: repeat(6, 10vmin);
+    gap: 1vmin;
+    margin-top: -4vmin;
+}
+
+#board > div {
+    border-radius: 50%;
+    border: 0.1vmin solid gray;
+}
+
+button {
+    margin-top: 4vmin;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border-radius: 4vmin;
+    border: 0.1vmin solid gray;
+    color: gray;
+}
+
+button:hover {
+    color: white;
+    background-color: darkgray;
+}
